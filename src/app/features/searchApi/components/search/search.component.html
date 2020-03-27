@@ -1,0 +1,29 @@
+
+<div fxLayout="column" flexLayout="center center">
+
+<div fxFlex="30">
+  <form [formGroup]='searchForm' novalidate autocomplete="off">
+
+    <div>
+      <mat-form-field fxFlex=100>
+        <mat-label>Search param</mat-label>
+        <input formControlName='searchCriteria' matInput placeholder='Search...'>
+      </mat-form-field>
+    </div>
+
+    <h3>Select search engine:</h3>
+
+
+    <mat-radio-group aria-label='Select an option' formControlName='searchEngine'>
+      <mat-radio-button *ngFor="let searchEngine of searchEngines" [value]='searchEngine' name='searchEngine'>{{searchEngine}}</mat-radio-button>
+      </mat-radio-group>
+
+
+</form>
+</div>
+<div>
+  <router-outlet name='searchEngineOutlet'></router-outlet>
+</div>
+</div>
+
+
