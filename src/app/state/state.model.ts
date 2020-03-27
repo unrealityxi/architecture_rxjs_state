@@ -5,4 +5,5 @@ export class State implements IState {
   stateVersion = 0;
   searchEngine: searchEngines = searchEngines.bing;
   searchCriteria: string;
+  summaryTimesVisited = 0;
 }
